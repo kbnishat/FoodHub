@@ -43,7 +43,8 @@
             </div>
         </div>
     </nav>
- <!-- Hero Section with Search -->
+
+    <!-- Hero Section with Search -->
     <section class="bg-gradient-to-r from-orange-500 to-red-500 text-white py-16">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Delicious Food Delivered to You</h1>
@@ -88,5 +89,340 @@
             <button class="category-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition" data-category="dessert">
                 Dessert
             </button>
+        </div>
+    </section>
+
+    <!-- Food Items by Category -->
+    <section id="menu" class="container mx-auto px-4 pb-12">
+        <!-- Pizza Section -->
+        <div class="food-category mb-12" data-category="pizza">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-pizza-slice text-orange-500 mr-3"></i>
+                Pizza
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="./Image/1.jpg" alt="Margherita Pizza" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Margherita Pizza</h3>
+                        <p class="text-gray-600 mb-4">Classic Italian pizza with fresh mozzarella, tomato sauce, and basil</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-500">$12.99</span>
+                            <div class="flex gap-2">
+                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Margherita Pizza" data-price="12.99" data-image="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&h=300&fit=crop">
+                                    <i class="fas fa-cart-plus"></i> Add
+                                </button>
+                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Margherita Pizza" data-price="12.99" data-image="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&h=300&fit=crop">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="./Image/2.jpg" alt="Pepperoni Pizza" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Pepperoni Pizza</h3>
+                        <p class="text-gray-600 mb-4">Spicy pepperoni with mozzarella cheese on a crispy crust</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-500">$14.99</span>
+                            <div class="flex gap-2">
+                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Pepperoni Pizza" data-price="14.99" data-image="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&h=300&fit=crop">
+                                    <i class="fas fa-cart-plus"></i> Add
+                                </button>
+                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Pepperoni Pizza" data-price="14.99" data-image="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&h=300&fit=crop">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="./Image/3.jpg" alt="BBQ Chicken Pizza" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">BBQ Chicken Pizza</h3>
+                        <p class="text-gray-600 mb-4">Grilled chicken with BBQ sauce, red onions, and cilantro</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-500">$16.99</span>
+                            <div class="flex gap-2">
+                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="BBQ Chicken Pizza" data-price="16.99" data-image="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=500&h=300&fit=crop">
+                                    <i class="fas fa-cart-plus"></i> Add
+                                </button>
+                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="BBQ Chicken Pizza" data-price="16.99" data-image="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=500&h=300&fit=crop">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burger Section -->
+        <div class="food-category mb-12" data-category="burger">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-hamburger text-orange-500 mr-3"></i>
+                Burger
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="./Image/6 (2).jpg" alt="Classic Burger" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Classic Burger</h3>
+                        <p class="text-gray-600 mb-4">Juicy beef patty with lettuce, tomato, onion, and special sauce</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-500">$8.99</span>
+                            <div class="flex gap-2">
+                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Classic Burger" data-price="8.99" data-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&h=300&fit=crop">
+                                    <i class="fas fa-cart-plus"></i> Add
+                                </button>
+                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Classic Burger" data-price="8.99" data-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&h=300&fit=crop">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="./Image/7.jpg" alt="Cheese Burger" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cheese Burger</h3>
+                        <p class="text-gray-600 mb-4">Double cheese with crispy bacon and fresh vegetables</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-500">$10.99</span>
+                            <div class="flex gap-2">
+                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Cheese Burger" data-price="10.99" data-image="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&h=300&fit=crop">
+                                    <i class="fas fa-cart-plus"></i> Add
+                                </button>
+                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Cheese Burger" data-price="10.99" data-image="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&h=300&fit=crop">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="./Image/8.jpg" alt="Veggie Burger" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Veggie Burger</h3>
+                        <p class="text-gray-600 mb-4">Plant-based patty with avocado, sprouts, and vegan mayo</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-500">$9.99</span>
+                            <div class="flex gap-2">
+                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Veggie Burger" data-price="9.99" data-image="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500&h=300&fit=crop">
+                                    <i class="fas fa-cart-plus"></i> Add
+                                </button>
+                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Veggie Burger" data-price="9.99" data-image="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500&h=300&fit=crop">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Biriyani Section -->
+        <div class="food-category mb-12" data-category="biriyani">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-bowl-food text-orange-500 mr-3"></i>
+                Biriyani
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="./Image/10.jpg" alt="Chicken Biriyani" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Chicken Biriyani</h3>
+                        <p class="text-gray-600 mb-4">Fragrant basmati rice with tender chicken and aromatic spices</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-500">$15.99</span>
+                            <div class="flex gap-2">
+                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Chicken Biriyani" data-price="15.99" data-image="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=500&h=300&fit=crop">
+                                    <i class="fas fa-cart-plus"></i> Add
+                                </button>
+                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Chicken Biriyani" data-price="15.99" data-image="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=500&h=300&fit=crop">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="./Image/9.jpg" alt="Mutton Biriyani" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mutton Biriyani</h3>
+                        <p class="text-gray-600 mb-4">Slow-cooked mutton with long-grain rice and traditional spices</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-500">$18.99</span>
+                            <div class="flex gap-2">
+                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Mutton Biriyani" data-price="18.99" data-image="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=500&h=300&fit=crop">
+                                    <i class="fas fa-cart-plus"></i> Add
+                                </button>
+                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Mutton Biriyani" data-price="18.99" data-image="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=500&h=300&fit=crop">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="./Image/10.jpg" alt="Vegetable Biriyani" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Vegetable Biriyani</h3>
+                        <p class="text-gray-600 mb-4">Mixed vegetables cooked with basmati rice and aromatic spices</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-500">$12.99</span>
+                            <div class="flex gap-2">
+                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Vegetable Biriyani" data-price="12.99" data-image="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500&h=300&fit=crop">
+                                    <i class="fas fa-cart-plus"></i> Add
+                                </button>
+                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Vegetable Biriyani" data-price="12.99" data-image="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500&h=300&fit=crop">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Drinks Section -->
+        <div class="food-category mb-12" data-category="drinks">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-glass-water text-orange-500 mr-3"></i>
+                Drinks
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="./Image/13.jpg" alt="Fresh Orange Juice" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Fresh Orange Juice</h3>
+                        <p class="text-gray-600 mb-4">100% fresh squeezed orange juice, no added sugar</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-500">$4.99</span>
+                            <div class="flex gap-2">
+                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Fresh Orange Juice" data-price="4.99" data-image="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&h=300&fit=crop">
+                                    <i class="fas fa-cart-plus"></i> Add
+                                </button>
+                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Fresh Orange Juice" data-price="4.99" data-image="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&h=300&fit=crop">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="./Image/14.jpg" alt="Mango Smoothie" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mango Smoothie</h3>
+                        <p class="text-gray-600 mb-4">Creamy mango smoothie with yogurt and honey</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-500">$5.99</span>
+                            <div class="flex gap-2">
+                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Mango Smoothie" data-price="5.99" data-image="https://images.unsplash.com/photo-1523362628745-0c100150b504?w=500&h=300&fit=crop">
+                                    <i class="fas fa-cart-plus"></i> Add
+                                </button>
+                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Mango Smoothie" data-price="5.99" data-image="https://images.unsplash.com/photo-1523362628745-0c100150b504?w=500&h=300&fit=crop">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="./Image/15.jpg" alt="Iced Coffee" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Iced Coffee</h3>
+                        <p class="text-gray-600 mb-4">Cold brew coffee with ice, milk, and vanilla syrup</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-500">$6.99</span>
+                            <div class="flex gap-2">
+                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Iced Coffee" data-price="6.99" data-image="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&h=300&fit=crop">
+                                    <i class="fas fa-cart-plus"></i> Add
+                                </button>
+                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Iced Coffee" data-price="6.99" data-image="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&h=300&fit=crop">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dessert Section -->
+        <div class="food-category mb-12" data-category="dessert">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-ice-cream text-orange-500 mr-3"></i>
+                Dessert
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="./Image/18 (1).jpg" alt="Chocolate Cake" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Chocolate Cake</h3>
+                        <p class="text-gray-600 mb-4">Rich chocolate cake with creamy frosting and chocolate chips</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-500">$7.99</span>
+                            <div class="flex gap-2">
+                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Chocolate Cake" data-price="7.99" data-image="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&h=300&fit=crop">
+                                    <i class="fas fa-cart-plus"></i> Add
+                                </button>
+                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Chocolate Cake" data-price="7.99" data-image="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&h=300&fit=crop">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="./Image/18 (1).jpg" alt="Ice Cream Sundae" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Ice Cream Sundae</h3>
+                        <p class="text-gray-600 mb-4">Vanilla ice cream with hot fudge, nuts, and whipped cream</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-500">$6.99</span>
+                            <div class="flex gap-2">
+                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Ice Cream Sundae" data-price="6.99" data-image="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=500&h=300&fit=crop">
+                                    <i class="fas fa-cart-plus"></i> Add
+                                </button>
+                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Ice Cream Sundae" data-price="6.99" data-image="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=500&h=300&fit=crop">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="./Image/18 (2).jpg" alt="Cheesecake" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cheesecake</h3>
+                        <p class="text-gray-600 mb-4">Creamy New York style cheesecake with berry compote</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-500">$8.99</span>
+                            <div class="flex gap-2">
+                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Cheesecake" data-price="8.99" data-image="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500&h=300&fit=crop">
+                                    <i class="fas fa-cart-plus"></i> Add
+                                </button>
+                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Cheesecake" data-price="8.99" data-image="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500&h=300&fit=crop">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>

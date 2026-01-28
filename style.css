@@ -1,0 +1,74 @@
+/* Custom Styles */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.food-card {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Hover effects */
+.food-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* Category button active state */
+.category-btn.active {
+    background-color: #f97316;
+    color: white;
+}
+
+/* Quantity button hover effects */
+.quantity-btn:hover {
+    background-color: #e5e7eb;
+    transform: scale(1.1);
+}
+
+/* Order item hover effect */
+.order-item:hover {
+    background-color: #f9fafb;
+    transition: background-color 0.2s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .food-card {
+        margin-bottom: 1rem;
+    }
+    
+    .order-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .order-item > div {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Loading state */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
