@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHub - Order Delicious Food Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-utensils text-3xl text-orange-500"></i>
+                    <span class="text-2xl font-bold text-gray-800">FoodHub</span>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-orange-500 font-semibold hover:text-orange-600">Home</a>
+                    <a href="#menu" class="text-gray-700 hover:text-orange-500 transition">Menu</a>
+                    <button id="cart-icon-btn" class="text-gray-700 hover:text-orange-500 transition relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-orange-500 font-semibold">Home</a>
+                <a href="#menu" class="block py-2 text-gray-700 hover:text-orange-500">Menu</a>
+                <button id="mobile-cart-btn" class="block py-2 text-gray-700 hover:text-orange-500 w-full text-left">Cart</button>
+            </div>
+        </div>
+    </nav>
+ <!-- Hero Section with Search -->
+    <section class="bg-gradient-to-r from-orange-500 to-red-500 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Delicious Food Delivered to You</h1>
+            <p class="text-xl mb-8">Order your favorite meals from the best restaurants</p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto">
+                <div class="flex items-center bg-white rounded-full shadow-lg p-2">
+                    <i class="fas fa-search text-gray-400 ml-4"></i>
+                    <input 
+                        type="text" 
+                        id="search-input"
+                        placeholder="Search for food or restaurant..." 
+                        class="flex-1 px-4 py-2 outline-none text-gray-800"
+                    >
+                    <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filters -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <button class="category-btn active px-6 py-2 rounded-full bg-orange-500 text-white font-semibold hover:bg-orange-600 transition" data-category="all">
+                All
+            </button>
+            <button class="category-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition" data-category="pizza">
+                Pizza
+            </button>
+            <button class="category-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition" data-category="burger">
+                Burger
+            </button>
+            <button class="category-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition" data-category="biriyani">
+                Biriyani
+            </button>
+            <button class="category-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition" data-category="drinks">
+                Drinks
+            </button>
+            <button class="category-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition" data-category="dessert">
+                Dessert
+            </button>
+        </div>
+    </section>
