@@ -72,3 +72,36 @@ html {
 ::-webkit-scrollbar {
     width: 8px;
 }
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f97316;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ea580c;
+}
+
+/* Cart Modal Styles */
+#cart-modal {
+    transition: opacity 0.3s ease;
+}
+
+#cart-modal .absolute.right-0 {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Cart item animations */
+.cart-item {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Prevent body scroll when cart is open */
+body.cart-open {
+    overflow: hidden;
+}
+
