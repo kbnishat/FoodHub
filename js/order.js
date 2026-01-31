@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="text-center py-8 text-gray-500">
                     <i class="fas fa-shopping-cart text-4xl mb-4"></i>
                     <p>Your cart is empty</p>
-                    <a href="index.html" class="text-orange-500 hover:text-orange-600 mt-4 inline-block">Continue Shopping</a>
+                    <a href="index.html" class="text-blue-600 hover:text-purple-600 mt-4 inline-block">Continue Shopping</a>
                 </div>
             `;
             updatePricing();
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <img src="${item.image}" alt="${item.name}" class="w-20 h-20 object-cover rounded-lg">
                     <div>
                         <h3 class="font-semibold text-gray-800 text-lg">${item.name}</h3>
-                        <p class="text-orange-500 font-bold">$${parseFloat(item.price).toFixed(2)}</p>
+                        <p class="text-blue-600 font-bold">$${parseFloat(item.price).toFixed(2)}</p>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <div class="flex justify-between pt-2 border-t border-gray-300">
                     <span class="text-lg font-bold text-gray-800">Total</span>
-                    <span class="text-lg font-bold text-orange-500">$${total.toFixed(2)}</span>
+                    <span class="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$${total.toFixed(2)}</span>
                 </div>
             </div>
         `;
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="text-left">
                 <div class="mb-4">
                     <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                        <i class="fas fa-shopping-bag text-orange-500 mr-2"></i>
+                        <i class="fas fa-shopping-bag text-blue-600 mr-2"></i>
                         Order Summary
                     </h3>
                     <div class="max-h-64 overflow-y-auto">
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showCancelButton: true,
             confirmButtonText: '<i class="fas fa-check mr-2"></i>Place Order',
             cancelButtonText: '<i class="fas fa-times mr-2"></i>Cancel',
-            confirmButtonColor: '#f97316',
+            confirmButtonColor: '#2563eb',
             cancelButtonColor: '#6b7280',
             reverseButtons: true,
             customClass: {
@@ -259,11 +259,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             <i class="fas fa-check-circle text-6xl text-green-500 mb-4"></i>
                         </div>
                         <p class="text-lg text-gray-700 mb-2">Thank you for your order!</p>
-                        <p class="text-sm text-gray-600 mb-4">Order Number: <strong class="text-orange-500">${orderNumber}</strong></p>
+                        <p class="text-sm text-gray-600 mb-4">Order Number: <strong class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">${orderNumber}</strong></p>
                         <div class="bg-gray-50 p-4 rounded-lg mb-4">
                             <p class="text-sm text-gray-600 mb-2"><strong>Order Details:</strong></p>
                             <p class="text-sm text-gray-600">Total Items: ${cartItems.reduce((sum, item) => sum + item.quantity, 0)}</p>
-                            <p class="text-sm text-gray-600">Total Amount: <strong class="text-orange-500">$${total.toFixed(2)}</strong></p>
+                            <p class="text-sm text-gray-600">Total Amount: <strong class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$${total.toFixed(2)}</strong></p>
                         </div>
                         <p class="text-sm text-gray-500">You will receive a confirmation email shortly.</p>
                     </div>

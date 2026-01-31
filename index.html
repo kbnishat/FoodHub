@@ -3,29 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodHub - Order Delicious Food Online</title>
+    <title>TastyBites</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-50">
+<body class="bg-gradient-to-br from-slate-50 to-blue-50">
     <!-- Navigation Bar -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-blue-100">
         <div class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
-                <div class="flex items-center space-x-2">
-                    <i class="fas fa-utensils text-3xl text-orange-500"></i>
-                    <span class="text-2xl font-bold text-gray-800">FoodHub</span>
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-br from-blue-600 to-purple-600 p-2 rounded-xl">
+                        <i class="fas fa-shipping-fast text-white text-2xl"></i>
+                    </div>
+                    <span class="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">TastyBites</span>
                 </div>
                 
                 <!-- Navigation Menu -->
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="text-orange-500 font-semibold hover:text-orange-600">Home</a>
-                    <a href="#menu" class="text-gray-700 hover:text-orange-500 transition">Menu</a>
-                    <button id="cart-icon-btn" class="text-gray-700 hover:text-orange-500 transition relative">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span id="cart-count" class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-blue-600 font-semibold hover:text-purple-600 transition">Home</a>
+                    <a href="#menu" class="text-gray-700 hover:text-blue-600 transition">Menu</a>
+                    <button id="cart-icon-btn" class="text-gray-700 hover:text-blue-600 transition relative">
+                        <i class="fas fa-shopping-bag text-xl"></i>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">0</span>
                     </button>
                 </div>
                 
@@ -37,30 +39,36 @@
             
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-                <a href="index.html" class="block py-2 text-orange-500 font-semibold">Home</a>
-                <a href="#menu" class="block py-2 text-gray-700 hover:text-orange-500">Menu</a>
-                <button id="mobile-cart-btn" class="block py-2 text-gray-700 hover:text-orange-500 w-full text-left">Cart</button>
+                <a href="index.html" class="block py-2 text-blue-600 font-semibold">Home</a>
+                <a href="#menu" class="block py-2 text-gray-700 hover:text-blue-600">Menu</a>
+                <button id="mobile-cart-btn" class="block py-2 text-gray-700 hover:text-blue-600 w-full text-left">Cart</button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section with Search -->
-    <section class="bg-gradient-to-r from-orange-500 to-red-500 text-white py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Delicious Food Delivered to You</h1>
-            <p class="text-xl mb-8">Order your favorite meals from the best restaurants</p>
+    <section class="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Savor Every Bite,<br>Delivered Fresh</h1>
+            <p class="text-xl md:text-2xl mb-10 text-blue-100">Premium meals crafted with care, delivered to your door</p>
             
             <!-- Search Bar -->
-            <div class="max-w-2xl mx-auto">
-                <div class="flex items-center bg-white rounded-full shadow-lg p-2">
-                    <i class="fas fa-search text-gray-400 ml-4"></i>
+            <div class="max-w-3xl mx-auto">
+                <div class="flex items-center bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-3">
+                    <div class="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl ml-2">
+                        <i class="fas fa-search text-white"></i>
+                    </div>
                     <input 
                         type="text" 
                         id="search-input"
-                        placeholder="Search for food or restaurant..." 
-                        class="flex-1 px-4 py-2 outline-none text-gray-800"
+                        placeholder="What are you craving today?" 
+                        class="flex-1 px-4 py-3 outline-none text-gray-800 bg-transparent text-lg"
                     >
-                    <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition">
+                    <button class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl">
                         Search
                     </button>
                 </div>
@@ -69,50 +77,57 @@
     </section>
 
     <!-- Category Filters -->
-    <section class="container mx-auto px-4 py-8">
-        <div class="flex flex-wrap justify-center gap-4 mb-8">
-            <button class="category-btn active px-6 py-2 rounded-full bg-orange-500 text-white font-semibold hover:bg-orange-600 transition" data-category="all">
-                All
-            </button>
-            <button class="category-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition" data-category="pizza">
-                Pizza
-            </button>
-            <button class="category-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition" data-category="burger">
-                Burger
-            </button>
-            <button class="category-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition" data-category="biriyani">
-                Biriyani
-            </button>
-            <button class="category-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition" data-category="drinks">
-                Drinks
-            </button>
-            <button class="category-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition" data-category="dessert">
-                Dessert
-            </button>
+    <section class="container mx-auto px-4 py-10 -mt-8 relative z-20">
+        <div class="bg-white rounded-2xl shadow-xl p-6">
+            <div class="flex flex-wrap justify-center gap-3">
+                <button class="category-btn active px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:shadow-lg transition-all transform hover:scale-105" data-category="all">
+                    <i class="fas fa-th-large mr-2"></i>All
+                </button>
+                <button class="category-btn px-6 py-3 rounded-xl bg-blue-50 text-blue-700 font-semibold hover:bg-blue-100 transition-all transform hover:scale-105" data-category="pizza">
+                    <i class="fas fa-pizza-slice mr-2"></i>Pizza
+                </button>
+                <button class="category-btn px-6 py-3 rounded-xl bg-blue-50 text-blue-700 font-semibold hover:bg-blue-100 transition-all transform hover:scale-105" data-category="burger">
+                    <i class="fas fa-hamburger mr-2"></i>Burger
+                </button>
+                <button class="category-btn px-6 py-3 rounded-xl bg-blue-50 text-blue-700 font-semibold hover:bg-blue-100 transition-all transform hover:scale-105" data-category="biriyani">
+                    <i class="fas fa-bowl-food mr-2"></i>Biriyani
+                </button>
+                <button class="category-btn px-6 py-3 rounded-xl bg-blue-50 text-blue-700 font-semibold hover:bg-blue-100 transition-all transform hover:scale-105" data-category="drinks">
+                    <i class="fas fa-glass-water mr-2"></i>Drinks
+                </button>
+                <button class="category-btn px-6 py-3 rounded-xl bg-blue-50 text-blue-700 font-semibold hover:bg-blue-100 transition-all transform hover:scale-105" data-category="dessert">
+                    <i class="fas fa-ice-cream mr-2"></i>Dessert
+                </button>
+            </div>
         </div>
     </section>
 
     <!-- Food Items by Category -->
-    <section id="menu" class="container mx-auto px-4 pb-12">
+    <section id="menu" class="container mx-auto px-4 pb-16">
         <!-- Pizza Section -->
-        <div class="food-category mb-12" data-category="pizza">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-pizza-slice text-orange-500 mr-3"></i>
-                Pizza
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                    <img src="./Image/1.jpg" alt="Margherita Pizza" class="w-full h-48 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Margherita Pizza</h3>
-                        <p class="text-gray-600 mb-4">Classic Italian pizza with fresh mozzarella, tomato sauce, and basil</p>
+        <div class="food-category mb-16" data-category="pizza">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-4xl font-extrabold text-gray-800 flex items-center">
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Pizza</span>
+                </h2>
+                <div class="hidden md:block w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="food-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=400&fit=crop&q=80" alt="Margherita Pizza" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold">Popular</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Margherita Pizza</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Classic Italian pizza with fresh mozzarella, tomato sauce, and basil</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-orange-500">$12.99</span>
+                            <span class="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$12.99</span>
                             <div class="flex gap-2">
-                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Margherita Pizza" data-price="12.99" data-image="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&h=300&fit=crop">
-                                    <i class="fas fa-cart-plus"></i> Add
+                                <button class="add-to-cart-btn bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl transition font-semibold" data-name="Margherita Pizza" data-price="12.99" data-image="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=400&fit=crop&q=80">
+                                    <i class="fas fa-plus mr-1"></i>Add
                                 </button>
-                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Margherita Pizza" data-price="12.99" data-image="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&h=300&fit=crop">
+                                <button class="buy-now-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-xl transition font-semibold shadow-lg" data-name="Margherita Pizza" data-price="12.99" data-image="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=400&fit=crop&q=80">
                                     Buy Now
                                 </button>
                             </div>
@@ -120,19 +135,20 @@
                     </div>
                 </div>
                 
-
-                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                    <img src="./Image/2.jpg" alt="Pepperoni Pizza" class="w-full h-48 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Pepperoni Pizza</h3>
-                        <p class="text-gray-600 mb-4">Spicy pepperoni with mozzarella cheese on a crispy crust</p>
+                <div class="food-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&h=400&fit=crop&q=80" alt="Pepperoni Pizza" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Pepperoni Pizza</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Spicy pepperoni with mozzarella cheese on a crispy crust</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-orange-500">$14.99</span>
+                            <span class="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$14.99</span>
                             <div class="flex gap-2">
-                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Pepperoni Pizza" data-price="14.99" data-image="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&h=300&fit=crop">
-                                    <i class="fas fa-cart-plus"></i> Add
+                                <button class="add-to-cart-btn bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl transition font-semibold" data-name="Pepperoni Pizza" data-price="14.99" data-image="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&h=400&fit=crop&q=80">
+                                    <i class="fas fa-plus mr-1"></i>Add
                                 </button>
-                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Pepperoni Pizza" data-price="14.99" data-image="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&h=300&fit=crop">
+                                <button class="buy-now-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-xl transition font-semibold shadow-lg" data-name="Pepperoni Pizza" data-price="14.99" data-image="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&h=400&fit=crop&q=80">
                                     Buy Now
                                 </button>
                             </div>
@@ -140,18 +156,20 @@
                     </div>
                 </div>
                 
-                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                    <img src="./Image/3.jpg" alt="BBQ Chicken Pizza" class="w-full h-48 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">BBQ Chicken Pizza</h3>
-                        <p class="text-gray-600 mb-4">Grilled chicken with BBQ sauce, red onions, and cilantro</p>
+                <div class="food-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=600&h=400&fit=crop&q=80" alt="BBQ Chicken Pizza" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">BBQ Chicken Pizza</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Grilled chicken with BBQ sauce, red onions, and cilantro</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-orange-500">$16.99</span>
+                            <span class="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$16.99</span>
                             <div class="flex gap-2">
-                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="BBQ Chicken Pizza" data-price="16.99" data-image="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=500&h=300&fit=crop">
-                                    <i class="fas fa-cart-plus"></i> Add
+                                <button class="add-to-cart-btn bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl transition font-semibold" data-name="BBQ Chicken Pizza" data-price="16.99" data-image="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=600&h=400&fit=crop&q=80">
+                                    <i class="fas fa-plus mr-1"></i>Add
                                 </button>
-                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="BBQ Chicken Pizza" data-price="16.99" data-image="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=500&h=300&fit=crop">
+                                <button class="buy-now-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-xl transition font-semibold shadow-lg" data-name="BBQ Chicken Pizza" data-price="16.99" data-image="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=600&h=400&fit=crop&q=80">
                                     Buy Now
                                 </button>
                             </div>
@@ -162,24 +180,28 @@
         </div>
 
         <!-- Burger Section -->
-        <div class="food-category mb-12" data-category="burger">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-hamburger text-orange-500 mr-3"></i>
-                Burger
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                    <img src="./Image/6 (2).jpg" alt="Classic Burger" class="w-full h-48 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Classic Burger</h3>
-                        <p class="text-gray-600 mb-4">Juicy beef patty with lettuce, tomato, onion, and special sauce</p>
+        <div class="food-category mb-16" data-category="burger">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-4xl font-extrabold text-gray-800 flex items-center">
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Burger</span>
+                </h2>
+                <div class="hidden md:block w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="food-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=400&fit=crop&q=80" alt="Classic Burger" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Classic Burger</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Juicy beef patty with lettuce, tomato, onion, and special sauce</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-orange-500">$8.99</span>
+                            <span class="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$8.99</span>
                             <div class="flex gap-2">
-                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Classic Burger" data-price="8.99" data-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&h=300&fit=crop">
-                                    <i class="fas fa-cart-plus"></i> Add
+                                <button class="add-to-cart-btn bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl transition font-semibold" data-name="Classic Burger" data-price="8.99" data-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=400&fit=crop&q=80">
+                                    <i class="fas fa-plus mr-1"></i>Add
                                 </button>
-                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Classic Burger" data-price="8.99" data-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&h=300&fit=crop">
+                                <button class="buy-now-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-xl transition font-semibold shadow-lg" data-name="Classic Burger" data-price="8.99" data-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=400&fit=crop&q=80">
                                     Buy Now
                                 </button>
                             </div>
@@ -187,18 +209,21 @@
                     </div>
                 </div>
                 
-                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                    <img src="./Image/7.jpg" alt="Cheese Burger" class="w-full h-48 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cheese Burger</h3>
-                        <p class="text-gray-600 mb-4">Double cheese with crispy bacon and fresh vegetables</p>
+                <div class="food-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=400&fit=crop&q=80" alt="Cheese Burger" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold">New</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Cheese Burger</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Double cheese with crispy bacon and fresh vegetables</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-orange-500">$10.99</span>
+                            <span class="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$10.99</span>
                             <div class="flex gap-2">
-                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Cheese Burger" data-price="10.99" data-image="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&h=300&fit=crop">
-                                    <i class="fas fa-cart-plus"></i> Add
+                                <button class="add-to-cart-btn bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl transition font-semibold" data-name="Cheese Burger" data-price="10.99" data-image="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=400&fit=crop&q=80">
+                                    <i class="fas fa-plus mr-1"></i>Add
                                 </button>
-                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Cheese Burger" data-price="10.99" data-image="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&h=300&fit=crop">
+                                <button class="buy-now-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-xl transition font-semibold shadow-lg" data-name="Cheese Burger" data-price="10.99" data-image="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=400&fit=crop&q=80">
                                     Buy Now
                                 </button>
                             </div>
@@ -206,18 +231,20 @@
                     </div>
                 </div>
                 
-                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                    <img src="./Image/8.jpg" alt="Veggie Burger" class="w-full h-48 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Veggie Burger</h3>
-                        <p class="text-gray-600 mb-4">Plant-based patty with avocado, sprouts, and vegan mayo</p>
+                <div class="food-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&h=400&fit=crop&q=80" alt="Veggie Burger" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Veggie Burger</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Plant-based patty with avocado, sprouts, and vegan mayo</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-orange-500">$9.99</span>
+                            <span class="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$9.99</span>
                             <div class="flex gap-2">
-                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Veggie Burger" data-price="9.99" data-image="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500&h=300&fit=crop">
-                                    <i class="fas fa-cart-plus"></i> Add
+                                <button class="add-to-cart-btn bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl transition font-semibold" data-name="Veggie Burger" data-price="9.99" data-image="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&h=400&fit=crop&q=80">
+                                    <i class="fas fa-plus mr-1"></i>Add
                                 </button>
-                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Veggie Burger" data-price="9.99" data-image="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500&h=300&fit=crop">
+                                <button class="buy-now-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-xl transition font-semibold shadow-lg" data-name="Veggie Burger" data-price="9.99" data-image="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&h=400&fit=crop&q=80">
                                     Buy Now
                                 </button>
                             </div>
@@ -227,26 +254,29 @@
             </div>
         </div>
 
-
         <!-- Biriyani Section -->
-        <div class="food-category mb-12" data-category="biriyani">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-bowl-food text-orange-500 mr-3"></i>
-                Biriyani
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                    <img src="./Image/10.jpg" alt="Chicken Biriyani" class="w-full h-48 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Chicken Biriyani</h3>
-                        <p class="text-gray-600 mb-4">Fragrant basmati rice with tender chicken and aromatic spices</p>
+        <div class="food-category mb-16" data-category="biriyani">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-4xl font-extrabold text-gray-800 flex items-center">
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Biriyani</span>
+                </h2>
+                <div class="hidden md:block w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="food-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&h=400&fit=crop&q=80" alt="Chicken Biriyani" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Chicken Biriyani</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Fragrant basmati rice with tender chicken and aromatic spices</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-orange-500">$15.99</span>
+                            <span class="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$15.99</span>
                             <div class="flex gap-2">
-                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Chicken Biriyani" data-price="15.99" data-image="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=500&h=300&fit=crop">
-                                    <i class="fas fa-cart-plus"></i> Add
+                                <button class="add-to-cart-btn bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl transition font-semibold" data-name="Chicken Biriyani" data-price="15.99" data-image="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&h=400&fit=crop&q=80">
+                                    <i class="fas fa-plus mr-1"></i>Add
                                 </button>
-                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Chicken Biriyani" data-price="15.99" data-image="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=500&h=300&fit=crop">
+                                <button class="buy-now-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-xl transition font-semibold shadow-lg" data-name="Chicken Biriyani" data-price="15.99" data-image="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&h=400&fit=crop&q=80">
                                     Buy Now
                                 </button>
                             </div>
@@ -254,18 +284,20 @@
                     </div>
                 </div>
                 
-                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                    <img src="./Image/9.jpg" alt="Mutton Biriyani" class="w-full h-48 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mutton Biriyani</h3>
-                        <p class="text-gray-600 mb-4">Slow-cooked mutton with long-grain rice and traditional spices</p>
+                <div class="food-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&h=400&fit=crop&q=80" alt="Mutton Biriyani" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Mutton Biriyani</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Slow-cooked mutton with long-grain rice and traditional spices</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-orange-500">$18.99</span>
+                            <span class="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$18.99</span>
                             <div class="flex gap-2">
-                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Mutton Biriyani" data-price="18.99" data-image="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=500&h=300&fit=crop">
-                                    <i class="fas fa-cart-plus"></i> Add
+                                <button class="add-to-cart-btn bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl transition font-semibold" data-name="Mutton Biriyani" data-price="18.99" data-image="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&h=400&fit=crop&q=80">
+                                    <i class="fas fa-plus mr-1"></i>Add
                                 </button>
-                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Mutton Biriyani" data-price="18.99" data-image="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=500&h=300&fit=crop">
+                                <button class="buy-now-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-xl transition font-semibold shadow-lg" data-name="Mutton Biriyani" data-price="18.99" data-image="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&h=400&fit=crop&q=80">
                                     Buy Now
                                 </button>
                             </div>
@@ -273,18 +305,20 @@
                     </div>
                 </div>
                 
-                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                    <img src="./Image/10.jpg" alt="Vegetable Biriyani" class="w-full h-48 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Vegetable Biriyani</h3>
-                        <p class="text-gray-600 mb-4">Mixed vegetables cooked with basmati rice and aromatic spices</p>
+                <div class="food-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&h=400&fit=crop&q=80" alt="Vegetable Biriyani" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Vegetable Biriyani</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Mixed vegetables cooked with basmati rice and aromatic spices</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-orange-500">$12.99</span>
+                            <span class="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$12.99</span>
                             <div class="flex gap-2">
-                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Vegetable Biriyani" data-price="12.99" data-image="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500&h=300&fit=crop">
-                                    <i class="fas fa-cart-plus"></i> Add
+                                <button class="add-to-cart-btn bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl transition font-semibold" data-name="Vegetable Biriyani" data-price="12.99" data-image="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&h=400&fit=crop&q=80">
+                                    <i class="fas fa-plus mr-1"></i>Add
                                 </button>
-                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Vegetable Biriyani" data-price="12.99" data-image="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500&h=300&fit=crop">
+                                <button class="buy-now-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-xl transition font-semibold shadow-lg" data-name="Vegetable Biriyani" data-price="12.99" data-image="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&h=400&fit=crop&q=80">
                                     Buy Now
                                 </button>
                             </div>
@@ -295,24 +329,28 @@
         </div>
 
         <!-- Drinks Section -->
-        <div class="food-category mb-12" data-category="drinks">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-glass-water text-orange-500 mr-3"></i>
-                Drinks
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                    <img src="./Image/13.jpg" alt="Fresh Orange Juice" class="w-full h-48 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Fresh Orange Juice</h3>
-                        <p class="text-gray-600 mb-4">100% fresh squeezed orange juice, no added sugar</p>
+        <div class="food-category mb-16" data-category="drinks">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-4xl font-extrabold text-gray-800 flex items-center">
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Drinks</span>
+                </h2>
+                <div class="hidden md:block w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="food-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&h=400&fit=crop&q=80" alt="Fresh Orange Juice" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Fresh Orange Juice</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">100% fresh squeezed orange juice, no added sugar</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-orange-500">$4.99</span>
+                            <span class="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$4.99</span>
                             <div class="flex gap-2">
-                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Fresh Orange Juice" data-price="4.99" data-image="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&h=300&fit=crop">
-                                    <i class="fas fa-cart-plus"></i> Add
+                                <button class="add-to-cart-btn bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl transition font-semibold" data-name="Fresh Orange Juice" data-price="4.99" data-image="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&h=400&fit=crop&q=80">
+                                    <i class="fas fa-plus mr-1"></i>Add
                                 </button>
-                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Fresh Orange Juice" data-price="4.99" data-image="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&h=300&fit=crop">
+                                <button class="buy-now-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-xl transition font-semibold shadow-lg" data-name="Fresh Orange Juice" data-price="4.99" data-image="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&h=400&fit=crop&q=80">
                                     Buy Now
                                 </button>
                             </div>
@@ -320,18 +358,20 @@
                     </div>
                 </div>
                 
-                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                    <img src="./Image/14.jpg" alt="Mango Smoothie" class="w-full h-48 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mango Smoothie</h3>
-                        <p class="text-gray-600 mb-4">Creamy mango smoothie with yogurt and honey</p>
+                <div class="food-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?w=600&h=400&fit=crop&q=80" alt="Mango Smoothie" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Mango Smoothie</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Creamy mango smoothie with yogurt and honey</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-orange-500">$5.99</span>
+                            <span class="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$5.99</span>
                             <div class="flex gap-2">
-                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Mango Smoothie" data-price="5.99" data-image="https://images.unsplash.com/photo-1523362628745-0c100150b504?w=500&h=300&fit=crop">
-                                    <i class="fas fa-cart-plus"></i> Add
+                                <button class="add-to-cart-btn bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl transition font-semibold" data-name="Mango Smoothie" data-price="5.99" data-image="https://images.unsplash.com/photo-1523362628745-0c100150b504?w=600&h=400&fit=crop&q=80">
+                                    <i class="fas fa-plus mr-1"></i>Add
                                 </button>
-                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Mango Smoothie" data-price="5.99" data-image="https://images.unsplash.com/photo-1523362628745-0c100150b504?w=500&h=300&fit=crop">
+                                <button class="buy-now-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-xl transition font-semibold shadow-lg" data-name="Mango Smoothie" data-price="5.99" data-image="https://images.unsplash.com/photo-1523362628745-0c100150b504?w=600&h=400&fit=crop&q=80">
                                     Buy Now
                                 </button>
                             </div>
@@ -339,18 +379,20 @@
                     </div>
                 </div>
                 
-                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                    <img src="./Image/15.jpg" alt="Iced Coffee" class="w-full h-48 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Iced Coffee</h3>
-                        <p class="text-gray-600 mb-4">Cold brew coffee with ice, milk, and vanilla syrup</p>
+                <div class="food-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&h=400&fit=crop&q=80" alt="Iced Coffee" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Iced Coffee</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Cold brew coffee with ice, milk, and vanilla syrup</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-orange-500">$6.99</span>
+                            <span class="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$6.99</span>
                             <div class="flex gap-2">
-                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Iced Coffee" data-price="6.99" data-image="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&h=300&fit=crop">
-                                    <i class="fas fa-cart-plus"></i> Add
+                                <button class="add-to-cart-btn bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl transition font-semibold" data-name="Iced Coffee" data-price="6.99" data-image="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&h=400&fit=crop&q=80">
+                                    <i class="fas fa-plus mr-1"></i>Add
                                 </button>
-                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Iced Coffee" data-price="6.99" data-image="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&h=300&fit=crop">
+                                <button class="buy-now-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-xl transition font-semibold shadow-lg" data-name="Iced Coffee" data-price="6.99" data-image="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&h=400&fit=crop&q=80">
                                     Buy Now
                                 </button>
                             </div>
@@ -361,24 +403,28 @@
         </div>
 
         <!-- Dessert Section -->
-        <div class="food-category mb-12" data-category="dessert">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-ice-cream text-orange-500 mr-3"></i>
-                Dessert
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                    <img src="./Image/18 (1).jpg" alt="Chocolate Cake" class="w-full h-48 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Chocolate Cake</h3>
-                        <p class="text-gray-600 mb-4">Rich chocolate cake with creamy frosting and chocolate chips</p>
+        <div class="food-category mb-16" data-category="dessert">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-4xl font-extrabold text-gray-800 flex items-center">
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Dessert</span>
+                </h2>
+                <div class="hidden md:block w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="food-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&h=400&fit=crop&q=80" alt="Chocolate Cake" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Chocolate Cake</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Rich chocolate cake with creamy frosting and chocolate chips</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-orange-500">$7.99</span>
+                            <span class="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$7.99</span>
                             <div class="flex gap-2">
-                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Chocolate Cake" data-price="7.99" data-image="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&h=300&fit=crop">
-                                    <i class="fas fa-cart-plus"></i> Add
+                                <button class="add-to-cart-btn bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl transition font-semibold" data-name="Chocolate Cake" data-price="7.99" data-image="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&h=400&fit=crop&q=80">
+                                    <i class="fas fa-plus mr-1"></i>Add
                                 </button>
-                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Chocolate Cake" data-price="7.99" data-image="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&h=300&fit=crop">
+                                <button class="buy-now-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-xl transition font-semibold shadow-lg" data-name="Chocolate Cake" data-price="7.99" data-image="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&h=400&fit=crop&q=80">
                                     Buy Now
                                 </button>
                             </div>
@@ -386,18 +432,20 @@
                     </div>
                 </div>
                 
-                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                    <img src="./Image/18 (1).jpg" alt="Ice Cream Sundae" class="w-full h-48 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Ice Cream Sundae</h3>
-                        <p class="text-gray-600 mb-4">Vanilla ice cream with hot fudge, nuts, and whipped cream</p>
+                <div class="food-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&h=400&fit=crop&q=80" alt="Ice Cream Sundae" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Ice Cream Sundae</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Vanilla ice cream with hot fudge, nuts, and whipped cream</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-orange-500">$6.99</span>
+                            <span class="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$6.99</span>
                             <div class="flex gap-2">
-                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Ice Cream Sundae" data-price="6.99" data-image="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=500&h=300&fit=crop">
-                                    <i class="fas fa-cart-plus"></i> Add
+                                <button class="add-to-cart-btn bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl transition font-semibold" data-name="Ice Cream Sundae" data-price="6.99" data-image="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&h=400&fit=crop&q=80">
+                                    <i class="fas fa-plus mr-1"></i>Add
                                 </button>
-                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Ice Cream Sundae" data-price="6.99" data-image="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=500&h=300&fit=crop">
+                                <button class="buy-now-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-xl transition font-semibold shadow-lg" data-name="Ice Cream Sundae" data-price="6.99" data-image="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&h=400&fit=crop&q=80">
                                     Buy Now
                                 </button>
                             </div>
@@ -405,18 +453,20 @@
                     </div>
                 </div>
                 
-                <div class="food-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                    <img src="./Image/18 (2).jpg" alt="Cheesecake" class="w-full h-48 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cheesecake</h3>
-                        <p class="text-gray-600 mb-4">Creamy New York style cheesecake with berry compote</p>
+                <div class="food-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=600&h=400&fit=crop&q=80" alt="Cheesecake" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Cheesecake</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Creamy New York style cheesecake with berry compote</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-orange-500">$8.99</span>
+                            <span class="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$8.99</span>
                             <div class="flex gap-2">
-                                <button class="add-to-cart-btn bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition" data-name="Cheesecake" data-price="8.99" data-image="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500&h=300&fit=crop">
-                                    <i class="fas fa-cart-plus"></i> Add
+                                <button class="add-to-cart-btn bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl transition font-semibold" data-name="Cheesecake" data-price="8.99" data-image="https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=600&h=400&fit=crop&q=80">
+                                    <i class="fas fa-plus mr-1"></i>Add
                                 </button>
-                                <button class="buy-now-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition" data-name="Cheesecake" data-price="8.99" data-image="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500&h=300&fit=crop">
+                                <button class="buy-now-btn bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 py-2.5 rounded-xl transition font-semibold shadow-lg" data-name="Cheesecake" data-price="8.99" data-image="https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=600&h=400&fit=crop&q=80">
                                     Buy Now
                                 </button>
                             </div>
@@ -427,46 +477,47 @@
         </div>
     </section>
 
-
-    
-  <footer class="bg-gray-800 text-white py-12">
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
                 <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <i class="fas fa-utensils text-2xl text-orange-500"></i>
-                        <span class="text-xl font-bold">FoodHub</span>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="bg-gradient-to-br from-blue-600 to-purple-600 p-2 rounded-xl">
+                            <i class="fas fa-shipping-fast text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">TastyBites</span>
                     </div>
-                    <p class="text-gray-400">Delivering delicious food to your doorstep. Order now and enjoy!</p>
+                    <p class="text-gray-400 leading-relaxed">Premium food delivery service. Fresh ingredients, fast delivery, exceptional taste.</p>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="index.html" class="hover:text-orange-500 transition">Home</a></li>
-                        <li><a href="#menu" class="hover:text-orange-500 transition">Menu</a></li>
-                        <li><a href="#cart" class="hover:text-orange-500 transition">Cart</a></li>
+                    <h3 class="text-lg font-bold mb-5 text-blue-400">Quick Links</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
+                        <li><a href="#menu" class="hover:text-blue-400 transition">Menu</a></li>
+                        <li><a href="#cart" class="hover:text-blue-400 transition">Cart</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-envelope mr-2"></i> info@foodhub.com</li>
-                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Food Street, City</li>
+                    <h3 class="text-lg font-bold mb-5 text-blue-400">Contact Us</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-phone mr-3 text-blue-400"></i> +1 (555) 987-6543</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-blue-400"></i> hello@tastybites.com</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-3 text-blue-400"></i> 456 Gourmet Avenue, City</li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <h3 class="text-lg font-bold mb-5 text-blue-400">Follow Us</h3>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-orange-500 transition"><i class="fab fa-facebook text-2xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-orange-500 transition"><i class="fab fa-twitter text-2xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-orange-500 transition"><i class="fab fa-instagram text-2xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-orange-500 transition"><i class="fab fa-youtube text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition transform hover:scale-110"><i class="fab fa-facebook text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition transform hover:scale-110"><i class="fab fa-twitter text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition transform hover:scale-110"><i class="fab fa-instagram text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition transform hover:scale-110"><i class="fab fa-youtube text-2xl"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 FoodHub. All rights reserved.</p>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 TastyBites. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -480,12 +531,12 @@
         <div id="cart-sidebar" class="absolute right-0 top-0 h-full w-full md:w-96 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out translate-x-full">
             <div class="flex flex-col h-full">
                 <!-- Cart Header -->
-                <div class="flex items-center justify-between p-6 border-b border-gray-200">
-                    <h2 class="text-2xl font-bold text-gray-800 flex items-center">
-                        <i class="fas fa-shopping-cart text-orange-500 mr-2"></i>
+                <div class="flex items-center justify-between p-6 border-b border-gray-200 bg-gradient-to-r from-blue-600 to-purple-600">
+                    <h2 class="text-2xl font-bold text-white flex items-center">
+                        <i class="fas fa-shopping-bag mr-2"></i>
                         Your Cart
                     </h2>
-                    <button id="close-cart-btn" class="text-gray-500 hover:text-gray-700 transition">
+                    <button id="close-cart-btn" class="text-white hover:text-gray-200 transition">
                         <i class="fas fa-times text-2xl"></i>
                     </button>
                 </div>
@@ -494,7 +545,7 @@
                 <div id="cart-items-container" class="flex-1 overflow-y-auto p-6">
                     <!-- Cart items will be dynamically inserted here -->
                     <div class="text-center py-12 text-gray-500">
-                        <i class="fas fa-shopping-cart text-5xl mb-4 text-gray-300"></i>
+                        <i class="fas fa-shopping-bag text-5xl mb-4 text-gray-300"></i>
                         <p class="text-lg mb-2">Your cart is empty</p>
                         <p class="text-sm">Add some delicious items to get started!</p>
                     </div>
@@ -517,14 +568,14 @@
                         </div>
                         <div class="border-t border-gray-300 pt-3 flex justify-between">
                             <span class="text-lg font-bold text-gray-800">Total</span>
-                            <span id="cart-total" class="text-lg font-bold text-orange-500">$2.99</span>
+                            <span id="cart-total" class="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">$2.99</span>
                         </div>
                     </div>
-                    <a href="order.html" id="view-cart-btn" class="block w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-lg text-center transition mb-2">
+                    <a href="order.html" id="view-cart-btn" class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 rounded-xl text-center transition mb-2 shadow-lg">
                         <i class="fas fa-shopping-bag mr-2"></i>
                         View Cart & Checkout
                     </a>
-                    <button id="close-cart-btn-bottom" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 rounded-lg transition">
+                    <button id="close-cart-btn-bottom" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 rounded-xl transition">
                         Continue Shopping
                     </button>
                 </div>
@@ -536,4 +587,3 @@
     <script src="js/home.js"></script>
 </body>
 </html>
-    

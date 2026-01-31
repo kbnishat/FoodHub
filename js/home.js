@@ -1,5 +1,12 @@
 // Home Page Functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Handle broken images with fallback
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', function() {
+            // Use a placeholder service as fallback
+            this.src = `https://via.placeholder.com/600x400/667eea/ffffff?text=${encodeURIComponent(this.alt || 'Food')}`;
+        });
+    });
     // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -20,10 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Update active button
             categoryButtons.forEach(btn => {
-                btn.classList.remove('active', 'bg-orange-500', 'text-white');
-                btn.classList.add('bg-gray-200', 'text-gray-700');
+                btn.classList.remove('active', 'bg-gradient-to-r', 'from-blue-600', 'to-purple-600', 'text-white');
+                btn.classList.add('bg-blue-50', 'text-blue-700');
             });
-            this.classList.add('active', 'bg-orange-500', 'text-white');
+            this.classList.add('active', 'bg-gradient-to-r', 'from-blue-600', 'to-purple-600', 'text-white');
             this.classList.remove('bg-gray-200', 'text-gray-700');
 
             // Filter food categories
@@ -158,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <img src="${item.image}" alt="${item.name}" class="w-20 h-20 object-cover rounded-lg flex-shrink-0">
                     <div class="flex-1 min-w-0">
                         <h3 class="font-semibold text-gray-800 mb-1">${item.name}</h3>
-                        <p class="text-orange-500 font-bold mb-2">$${parseFloat(item.price).toFixed(2)}</p>
+                        <p class="text-blue-600 font-bold mb-2">$${parseFloat(item.price).toFixed(2)}</p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
                                 <button class="cart-quantity-btn decrease bg-gray-200 hover:bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center transition text-sm" data-name="${item.name}">
